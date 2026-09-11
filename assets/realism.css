@@ -1,0 +1,277 @@
+/* Azadi Studio — workstation realism layer
+   Non-destructive visual upgrade loaded on GitHub Pages. */
+
+:root{
+  --real-light-x:52%;
+  --real-light-y:26%;
+}
+
+/* Room-level cinematic grounding */
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:2;
+  background:
+    radial-gradient(ellipse at 50% 74%,rgba(255,255,255,.055),transparent 31%),
+    radial-gradient(circle at var(--real-light-x) var(--real-light-y),rgba(255,255,255,.045),transparent 22%),
+    linear-gradient(90deg,rgba(0,0,0,.24),transparent 17%,transparent 83%,rgba(0,0,0,.28));
+  mix-blend-mode:screen;
+  opacity:.7;
+}
+.desk-zone:before{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;top:23%;height:17%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(0,0,0,.62),rgba(0,0,0,.28) 45%,transparent 73%);
+  filter:blur(18px);
+  transform:translateY(45px) scaleY(.45);
+  pointer-events:none;
+}
+
+/* Desk: layered laminate/wood, bevel and contact sheen */
+.desk-top{
+  background:
+    linear-gradient(105deg,rgba(255,255,255,.018),transparent 22%,rgba(255,255,255,.035) 49%,transparent 72%),
+    repeating-linear-gradient(91deg,rgba(255,255,255,.012) 0 1px,rgba(0,0,0,.018) 1px 4px),
+    linear-gradient(180deg,#25252a 0%,#18181d 16%,#101014 69%,#09090c 100%);
+  box-shadow:
+    0 -2px 0 rgba(255,255,255,.16),
+    0 -22px 60px rgba(0,0,0,.38),
+    inset 0 18px 45px rgba(255,255,255,.025),
+    inset 0 -18px 25px rgba(0,0,0,.48);
+  filter:saturate(.9) contrast(1.04);
+}
+.desk-top:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  clip-path:inherit;
+  pointer-events:none;
+  opacity:.42;
+  background:
+    radial-gradient(ellipse at 47% 10%,rgba(255,255,255,.12),transparent 26%),
+    linear-gradient(115deg,transparent 8%,rgba(255,255,255,.03) 31%,transparent 48%,rgba(255,255,255,.02) 69%,transparent 86%);
+}
+.desk-top:after{
+  content:"";
+  position:absolute;
+  left:7%;right:7%;top:2px;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),rgba(255,255,255,.06),transparent);
+  filter:blur(.2px);
+}
+.desk-edge{
+  background:linear-gradient(180deg,#232329 0,#111116 28%,#070709 100%);
+  box-shadow:0 28px 46px rgba(0,0,0,.67),inset 0 1px rgba(255,255,255,.15),inset 0 -2px rgba(0,0,0,.7);
+}
+.desk-leg{
+  background:linear-gradient(90deg,#050506,#1a1a1f 18%,#3a3a40 47%,#151519 71%,#060607);
+  box-shadow:inset 1px 0 rgba(255,255,255,.07),10px 16px 28px rgba(0,0,0,.42);
+}
+
+.realism-mat{
+  position:absolute;z-index:2;left:35%;bottom:10.5%;width:38%;height:28%;
+  border-radius:14px;
+  background:
+    radial-gradient(circle at 30% 12%,rgba(255,255,255,.035),transparent 22%),
+    linear-gradient(145deg,#101014,#050506 70%);
+  transform:perspective(700px) rotateX(69deg);
+  border:1px solid rgba(255,255,255,.055);
+  box-shadow:0 20px 28px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.04);
+  pointer-events:none;
+}
+.realism-cable{
+  position:absolute;z-index:2;border:2px solid rgba(16,16,20,.95);border-top-color:rgba(70,70,76,.38);
+  border-radius:50%;pointer-events:none;filter:drop-shadow(0 4px 3px rgba(0,0,0,.48));
+}
+.realism-cable.keyboard-cable{left:49%;bottom:18%;width:16%;height:22%;border-left-color:transparent;border-bottom-color:transparent;transform:rotate(-8deg)}
+.realism-cable.mouse-cable{left:68%;bottom:18%;width:10%;height:19%;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(16deg)}
+
+/* Main monitor: thicker metal body, edge bevel, glass and real stand */
+.computer{
+  filter:drop-shadow(0 42px 46px rgba(0,0,0,.62)) drop-shadow(0 8px 12px rgba(0,0,0,.32));
+  transform-style:preserve-3d;
+}
+.monitor{
+  border-radius:18px;
+  background:
+    linear-gradient(102deg,rgba(255,255,255,.14),transparent 7% 86%,rgba(255,255,255,.08)),
+    linear-gradient(155deg,#4a4a50 0%,#242429 5%,#0a0a0d 17%,#050506 76%,#25252a 96%,#56565b 100%);
+  border:1px solid rgba(255,255,255,.31);
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.5),
+    inset 0 -2px 8px rgba(0,0,0,.9),
+    inset 8px 0 12px rgba(255,255,255,.025),
+    0 0 0 1px rgba(0,0,0,.8),
+    0 21px 36px rgba(0,0,0,.4);
+  transform:translateZ(34px);
+}
+.monitor:before{
+  content:"";
+  position:absolute;
+  top:7px;bottom:7px;right:-7px;width:7px;
+  border-radius:0 8px 8px 0;
+  background:linear-gradient(90deg,#111115,#3a3a40 52%,#09090b);
+  box-shadow:inset 1px 0 rgba(255,255,255,.08),4px 7px 12px rgba(0,0,0,.35);
+  transform:skewY(-7deg);
+}
+.screen{
+  border-radius:8px;
+  background:
+    radial-gradient(circle at 74% 27%,rgba(240,24,47,.22),transparent 31%),
+    linear-gradient(140deg,#15151d,#07070b 60%,#111118);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.12),
+    inset 0 0 0 2px rgba(0,0,0,.65),
+    inset 0 0 54px rgba(0,0,0,.42),
+    0 1px rgba(255,255,255,.04);
+}
+.screen:after{
+  content:"";
+  position:absolute;inset:-20% -10%;z-index:19;pointer-events:none;
+  background:linear-gradient(112deg,transparent 20%,rgba(255,255,255,.035) 30%,rgba(255,255,255,.075) 36%,transparent 44% 100%);
+  transform:translateX(-28%);
+  opacity:.68;
+}
+.monitor-camera{
+  position:absolute;z-index:30;top:4px;left:50%;width:12px;height:4px;transform:translateX(-50%);
+  border-radius:999px;background:#030304;border:1px solid rgba(255,255,255,.08);
+  box-shadow:inset 0 0 0 1px #000,0 1px 2px rgba(255,255,255,.04);
+}
+.monitor-camera:after{content:"";position:absolute;right:1px;top:1px;width:2px;height:2px;border-radius:50%;background:#182a31;box-shadow:0 0 2px rgba(80,160,190,.25)}
+.monitor-vent{
+  position:absolute;z-index:3;left:38%;right:38%;bottom:-5px;height:2px;opacity:.42;
+  background:repeating-linear-gradient(90deg,#050506 0 2px,transparent 2px 4px);
+}
+.monitor-brandmark{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);font-size:5px;letter-spacing:.18em;color:rgba(255,255,255,.26);font-weight:800}
+.monitor-neck{
+  background:linear-gradient(90deg,#08080a,#25252a 15%,#55555b 43%,#2c2c31 59%,#0b0b0d 88%);
+  box-shadow:inset 1px 0 rgba(255,255,255,.16),inset -1px 0 rgba(0,0,0,.72),0 15px 24px rgba(0,0,0,.45);
+}
+.monitor-base{
+  background:linear-gradient(180deg,#64646a 0%,#303035 17%,#111115 61%,#070708 100%);
+  box-shadow:0 18px 24px rgba(0,0,0,.64),inset 0 1px rgba(255,255,255,.43),inset 0 -4px 8px rgba(0,0,0,.65);
+}
+.monitor-base:after{content:"";position:absolute;left:8%;right:8%;bottom:-5px;height:7px;border-radius:50%;background:rgba(0,0,0,.55);filter:blur(4px)}
+
+/* PC tower: tempered glass and visible components */
+.pc{
+  overflow:hidden;
+  border-radius:16px;
+  background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(9,9,11,.98) 13%,#0d0d12 74%,#030304);
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:-19px 29px 46px rgba(0,0,0,.57),inset 8px 0 17px rgba(255,255,255,.045),inset -2px 0 8px rgba(0,0,0,.8);
+}
+.pc:before{
+  inset:6% 9%;z-index:3;
+  background:linear-gradient(125deg,rgba(255,255,255,.095),rgba(255,255,255,.012) 33%,rgba(0,0,0,.1) 68%,rgba(255,255,255,.035));
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:inset 0 0 45px rgba(240,24,47,.055),0 0 0 1px rgba(0,0,0,.45);
+  pointer-events:none;
+}
+.pc:after{
+  content:"";position:absolute;z-index:5;left:12%;top:8%;width:2px;height:80%;
+  background:linear-gradient(transparent,rgba(255,255,255,.23),transparent);opacity:.42;
+}
+.pc-internals{position:absolute;z-index:1;inset:10% 13%;overflow:hidden;border-radius:8px;background:linear-gradient(145deg,#101218,#06070a)}
+.pc-board{position:absolute;left:8%;top:10%;width:62%;height:58%;border-radius:3px;background:linear-gradient(145deg,#242a27,#0f1714);border:1px solid rgba(120,180,150,.12);box-shadow:inset 0 0 12px rgba(0,0,0,.55)}
+.pc-board:before{content:"";position:absolute;inset:9%;background:repeating-linear-gradient(90deg,rgba(160,210,180,.09) 0 1px,transparent 1px 9px),repeating-linear-gradient(0deg,rgba(160,210,180,.06) 0 1px,transparent 1px 8px);opacity:.7}
+.pc-gpu{position:absolute;left:10%;right:8%;bottom:17%;height:17%;border-radius:4px;background:linear-gradient(180deg,#353941,#14161b 45%,#08090c);border:1px solid rgba(255,255,255,.11);box-shadow:0 5px 10px rgba(0,0,0,.42)}
+.pc-gpu:after{content:"AZADI RTX";position:absolute;right:7%;top:50%;transform:translateY(-50%);font:700 5px/1 sans-serif;letter-spacing:.08em;color:rgba(255,255,255,.42)}
+.pc-ram{position:absolute;left:24%;top:18%;width:4%;height:34%;background:linear-gradient(#9c1021,#3a0710);box-shadow:8px 0 #1b1d22,16px 0 #9c1021,24px 0 #1b1d22}
+.pc-tube{position:absolute;right:7%;top:24%;width:36%;height:33%;border:3px solid rgba(176,183,195,.26);border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(12deg)}
+.fan{z-index:2;border-color:rgba(255,255,255,.14);background:repeating-conic-gradient(from 0deg,rgba(240,24,47,.65) 0 8deg,rgba(15,15,18,.25) 9deg 23deg);box-shadow:0 0 19px rgba(240,24,47,.23),inset 0 0 18px rgba(240,24,47,.12)}
+
+/* Keyboard + mouse: denser keycap/material cues */
+.keyboard{
+  z-index:4;
+  background:linear-gradient(180deg,#3a3a40 0,#17171c 20%,#09090c 100%);
+  border-color:rgba(255,255,255,.17);
+  box-shadow:0 27px 34px rgba(0,0,0,.6),inset 0 1px rgba(255,255,255,.19),inset 0 -6px 10px rgba(0,0,0,.55);
+}
+.keyboard:before{
+  inset:8px 10px;
+  border-radius:4px;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 17px,rgba(0,0,0,.85) 17px 19px),
+    repeating-linear-gradient(0deg,rgba(70,70,78,.75) 0 12px,rgba(10,10,13,.95) 12px 15px);
+  box-shadow:inset 0 1px rgba(255,255,255,.08);
+  opacity:.92;
+}
+.mouse{
+  z-index:4;
+  background:linear-gradient(145deg,#48484f,#17171c 35%,#08080a 80%);
+  border-color:rgba(255,255,255,.17);
+  box-shadow:0 20px 28px rgba(0,0,0,.56),inset 2px 2px 4px rgba(255,255,255,.08),inset -4px -5px 8px rgba(0,0,0,.45);
+}
+.mouse:after{content:"";position:absolute;left:50%;top:4px;bottom:14px;width:1px;background:rgba(255,255,255,.08)}
+
+/* Speaker: brushed cabinet + deeper cones */
+.speaker{
+  overflow:hidden;
+  background:linear-gradient(115deg,#35353a,#17171b 26%,#09090c 72%,#25252a);
+  box-shadow:17px 25px 42px rgba(0,0,0,.45),inset 1px 1px rgba(255,255,255,.13),inset -6px -7px 14px rgba(0,0,0,.48);
+}
+.speaker:before,.speaker:after{
+  background:radial-gradient(circle,#050506 0 20%,#19191d 22% 31%,#55555b 32% 35%,#0a0a0c 37% 57%,#28282d 59% 66%,#070708 68%);
+  box-shadow:inset 0 0 12px rgba(0,0,0,.85),0 1px rgba(255,255,255,.07),0 6px 10px rgba(0,0,0,.28);
+}
+
+/* Action figure: sculpted vinyl/plastic instead of flat blocks */
+.figure{width:70px;height:139px;filter:drop-shadow(10px 18px 14px rgba(0,0,0,.53)) drop-shadow(0 2px 1px rgba(0,0,0,.35))}
+.figure-head{
+  left:10px;width:49px;height:46px;
+  border-radius:48% 48% 42% 42% / 52% 52% 46% 46%;
+  background:
+    radial-gradient(circle at 32% 25%,rgba(255,255,255,.34),transparent 12%),
+    linear-gradient(135deg,#f0c9b2 0,#c49178 54%,#7c5649 100%);
+  box-shadow:inset 5px 4px 7px rgba(255,255,255,.13),inset -8px -9px 12px rgba(78,38,28,.25),0 2px 3px rgba(0,0,0,.18);
+}
+.figure-head:before{
+  left:-3px;right:-3px;top:-5px;height:20px;
+  background:linear-gradient(155deg,#25242a,#08080a 72%);
+  border-radius:52% 48% 34% 38%;
+  box-shadow:inset 3px 2px rgba(255,255,255,.04);
+}
+.figure-head:after{content:"";position:absolute;left:22px;top:31px;width:7px;height:2px;border-radius:50%;background:rgba(82,42,34,.38);box-shadow:-12px -8px 0 -2px rgba(255,255,255,.3),12px -8px 0 -2px rgba(255,255,255,.3)}
+.eye{width:5px;height:5px;top:22px;background:radial-gradient(circle at 35% 30%,#fff 0 12%,#161316 18% 70%,#000 75%);box-shadow:0 1px 1px rgba(0,0,0,.25)}
+.figure-body{
+  left:14px;top:43px;width:41px;height:55px;
+  border-radius:10px 10px 8px 8px;
+  background:linear-gradient(120deg,#ff2c47 0,#bd1026 48%,#5b0610 100%);
+  box-shadow:inset 6px 3px rgba(255,255,255,.07),inset -7px -8px 10px rgba(70,0,8,.32),0 3px 4px rgba(0,0,0,.25);
+}
+.figure-body:after{content:"";position:absolute;left:8px;right:8px;bottom:10px;height:1px;background:rgba(255,255,255,.1);box-shadow:0 5px rgba(0,0,0,.22)}
+.arm,.leg{background:linear-gradient(110deg,#303038,#111116 55%,#050506);box-shadow:inset 2px 1px rgba(255,255,255,.05),2px 4px 5px rgba(0,0,0,.24)}
+.arm{width:10px;border-radius:7px 7px 9px 9px}.leg{width:12px;border-radius:6px 6px 4px 4px}
+.figure-shoe{position:absolute;top:126px;width:18px;height:8px;border-radius:7px 5px 3px 3px;background:linear-gradient(#323239,#09090b);box-shadow:0 4px 4px rgba(0,0,0,.4)}
+.figure-shoe.left{left:13px;transform:rotate(2deg)}.figure-shoe.right{right:12px;transform:rotate(-2deg)}
+
+/* Vinyl figure: glossy sculpted head/body */
+.funko{filter:drop-shadow(10px 17px 14px rgba(0,0,0,.55))}
+.funko .head{
+  background:
+    radial-gradient(circle at 27% 17%,rgba(255,255,255,.34),transparent 13%),
+    linear-gradient(135deg,#eac7ad,#be8b70 52%,#795244);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:inset 5px 4px 8px rgba(255,255,255,.12),inset -8px -9px 12px rgba(70,35,28,.22),0 2px 4px rgba(0,0,0,.25);
+}
+.funko .head:before{background:linear-gradient(150deg,#28272d,#09090b 68%);box-shadow:inset 3px 1px rgba(255,255,255,.035)}
+.funko .head:after{color:#09090a;text-shadow:-8px -5px 5px rgba(255,255,255,.1)}
+.funko .body{background:linear-gradient(120deg,#34343c,#111116 58%,#070708);box-shadow:inset 4px 2px rgba(255,255,255,.06),inset -5px -5px 8px rgba(0,0,0,.45)}
+.vinyl-glint{position:absolute;z-index:3;left:8px;top:8px;width:13px;height:7px;border-radius:50%;background:rgba(255,255,255,.17);filter:blur(1.2px);transform:rotate(-24deg)}
+
+/* Keep the realism layer subtle in focus mode */
+body.focus-mode .realism-mat,body.focus-mode .realism-cable{opacity:.16;filter:blur(3px)}
+
+@media(max-width:1000px){
+  .realism-mat{left:31%;width:44%}
+}
+@media(max-width:720px){
+  .realism-mat,.realism-cable{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .screen:after{transform:none}
+}
