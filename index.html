@@ -1,74 +1,52 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Azadi Studio</title>
-  <meta name="description" content="Azadi Studio — Coming Soon" />
-  <style>
-    :root {
-      color-scheme: light;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      min-height: 100%;
-      background: #ffffff;
-    }
-
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 32px;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    main {
-      width: min(100%, 1100px);
-      text-align: center;
-    }
-
-    .hello {
-      margin: 0;
-      color: #ff2d2d;
-      font-size: clamp(96px, 18vw, 260px);
-      line-height: 0.86;
-      letter-spacing: -0.07em;
-      font-weight: 700;
-      direction: ltr;
-    }
-
-    .message {
-      margin: 56px auto 0;
-      max-width: 760px;
-      color: #111111;
-      font-size: clamp(22px, 3vw, 38px);
-      line-height: 1.7;
-      font-weight: 600;
-    }
-
-    .name {
-      margin-top: 18px;
-      color: #6e6e73;
-      font-size: clamp(16px, 1.6vw, 22px);
-      font-weight: 500;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="description" content="Azadi Studio — Creative Freedom. Website & app design, 3D animation, film, graphic design, photography and videography.">
+<title>Azadi Studio — Creative Freedom</title>
+<style>
+:root{--red:#e50019;--hot:#ff2840;--bg:#09090b;--glass:rgba(255,255,255,.12);--line:rgba(255,255,255,.22);--mx:0;--my:0}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.hero{height:100svh;min-height:620px;position:relative;overflow:hidden;isolation:isolate;background:#0b0b0d}.sceneWrap{position:absolute;inset:-2.8vw;perspective:1500px;animation:intro 1.5s cubic-bezier(.2,.8,.2,1) both}.scene{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;transform:rotateX(calc(var(--my)*-2.3deg)) rotateY(calc(var(--mx)*3.7deg)) scale(1.045);transition:transform .09s linear}.scene img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;transform:translateZ(-20px) scale(1.02);filter:saturate(1.03) contrast(1.03) brightness(.92);user-select:none;pointer-events:none}.scene:before{content:"";position:absolute;inset:-5%;z-index:2;pointer-events:none;background:radial-gradient(circle at 50% 45%,transparent 30%,rgba(4,4,6,.07) 53%,rgba(4,4,6,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.16),transparent 32%,rgba(0,0,0,.22))}.scene:after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(ellipse at calc(50% + var(--mx)*10%) calc(40% + var(--my)*7%),rgba(255,255,255,.12),transparent 31%),linear-gradient(112deg,transparent 28%,rgba(255,255,255,.06) 43%,transparent 58%);mix-blend-mode:screen}.scan{position:absolute;z-index:4;left:0;right:0;top:-25%;height:24%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.07),transparent);filter:blur(9px);mix-blend-mode:screen;animation:scan 8s linear infinite;pointer-events:none}#dust{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.5}.glass{background:rgba(9,9,12,.3);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(20px) saturate(145%);-webkit-backdrop-filter:blur(20px) saturate(145%);box-shadow:0 18px 54px rgba(0,0,0,.22)}.brand{position:absolute;z-index:12;left:clamp(18px,4vw,72px);top:clamp(18px,4vw,58px);display:flex;gap:11px;align-items:center;border-radius:999px;padding:9px 15px 9px 10px}.mark{width:32px;height:32px;position:relative;filter:drop-shadow(0 8px 18px rgba(229,0,25,.42))}.mark:before{content:"";position:absolute;left:3px;top:1px;width:25px;height:28px;background:var(--red);clip-path:polygon(50% 0,100% 100%,75% 100%,50% 48%,26% 100%,0 100%)}.mark:after{content:"";position:absolute;left:11px;top:15px;width:10px;height:10px;background:#111;clip-path:polygon(50% 0,100% 100%,0 100%)}.brand b{font-size:13px;letter-spacing:.02em}.brand small{display:block;margin-top:2px;font-size:8px;letter-spacing:.24em;color:rgba(255,255,255,.6)}nav{position:absolute;z-index:12;right:clamp(18px,4vw,72px);top:clamp(18px,4vw,58px);display:flex;align-items:center;gap:4px;border-radius:999px;padding:6px}nav a{font-size:11px;color:rgba(255,255,255,.83);padding:10px 13px;border-radius:999px;transition:.25s}nav a:hover{background:rgba(255,255,255,.12);color:#fff}nav .cta{background:var(--red);color:#fff;padding-inline:17px;box-shadow:0 8px 26px rgba(229,0,25,.3)}nav .cta:hover{background:#ff1630;transform:translateY(-1px)}.heroLabel{position:absolute;z-index:11;left:clamp(18px,4vw,72px);bottom:clamp(22px,4vw,50px);max-width:360px;padding:14px 17px;border-radius:18px}.heroLabel .eyebrow{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#ff6d7c}.heroLabel h1{margin:7px 0 3px;font-size:clamp(24px,3vw,43px);line-height:.95;letter-spacing:-.045em}.heroLabel p{margin:0;color:rgba(255,255,255,.64);font-size:11px}.hint{position:absolute;z-index:11;bottom:21px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.62);padding:8px 12px;border-radius:999px}.hot{position:absolute;z-index:9;border:0;background:transparent;border-radius:18px;cursor:pointer;transform:translateZ(35px);outline:none}.hot:before{content:"";position:absolute;inset:-3px;border-radius:inherit;border:1px solid rgba(255,255,255,.72);background:rgba(255,255,255,.035);box-shadow:0 0 0 1px rgba(229,0,25,.18),0 0 35px rgba(229,0,25,.26),inset 0 0 28px rgba(255,255,255,.06);opacity:0;transition:.25s}.hot:after{content:attr(data-label);position:absolute;left:50%;top:-33px;transform:translate(-50%,8px);white-space:nowrap;padding:7px 10px;border-radius:999px;background:rgba(5,5,7,.84);border:1px solid rgba(255,255,255,.15);font-size:9px;font-weight:700;opacity:0;transition:.25s}.hot:hover:before,.hot:focus-visible:before,.hot:hover:after,.hot:focus-visible:after{opacity:1}.hot:hover:after,.hot:focus-visible:after{transform:translate(-50%,0)}.h1{left:42.7%;top:17.4%;width:13.8%;height:22.8%}.h2{left:57.3%;top:17.2%;width:14.2%;height:22.8%}.h3{left:36.7%;top:40.8%;width:12.1%;height:22.5%}.h4{left:48.5%;top:40.8%;width:12.1%;height:22.5%}.h5{left:60.3%;top:40.8%;width:12%;height:22.5%}.drawer{position:fixed;z-index:50;right:0;top:0;width:min(460px,92vw);height:100dvh;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(25,25,30,.48),rgba(8,8,10,.94));border-left:1px solid rgba(255,255,255,.16);backdrop-filter:blur(38px) saturate(160%);-webkit-backdrop-filter:blur(38px) saturate(160%);box-shadow:-35px 0 100px rgba(0,0,0,.45);transform:translateX(105%);transition:.6s cubic-bezier(.22,.9,.25,1)}.drawer.open{transform:none}.close{position:absolute;right:22px;top:22px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.17);background:rgba(255,255,255,.07);color:#fff;cursor:pointer}.drawer .eyebrow,.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.24em;font-weight:700;color:#ff6372}.drawer h2{font-size:clamp(38px,6vw,64px);line-height:.94;letter-spacing:-.05em;margin:12px 0}.drawer p{color:rgba(255,255,255,.7);line-height:1.7;margin:0 0 26px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font-size:10px;color:rgba(255,255,255,.72)}main{position:relative;z-index:15;background:radial-gradient(circle at 82% 14%,rgba(229,0,25,.15),transparent 25%),linear-gradient(180deg,#0a0a0c,#111116 48%,#08080a);border-top:1px solid rgba(255,255,255,.08)}section{width:min(1180px,calc(100% - 40px));margin:auto;padding:110px 0}.sectionTitle{margin:12px 0 20px;font-size:clamp(48px,7.2vw,96px);line-height:.94;letter-spacing:-.06em}.lead{max-width:690px;color:rgba(255,255,255,.58);font-size:clamp(15px,2vw,20px);line-height:1.65}.services{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:56px}.card{position:relative;min-height:300px;padding:24px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.035));box-shadow:inset 0 1px rgba(255,255,255,.16),0 28px 65px rgba(0,0,0,.19);transition:transform .18s, border-color .25s;transform-style:preserve-3d}.card:nth-child(-n+3){grid-column:span 2}.card:nth-child(n+4){grid-column:span 3;min-height:270px}.card:hover{border-color:rgba(255,255,255,.28)}.num{font-size:10px;color:rgba(255,255,255,.42);letter-spacing:.2em}.orb{position:absolute;width:135px;height:135px;right:22px;top:27px;border-radius:38% 62% 55% 45%;background:radial-gradient(circle at 28% 25%,#fff 0 3%,rgba(255,255,255,.45) 5%,transparent 12%),radial-gradient(circle at 36% 34%,#ff6f7d,transparent 25%),linear-gradient(135deg,#f9f9fb 3%,#e40017 45%,#270007 100%);box-shadow:inset -20px -25px 34px rgba(0,0,0,.26),0 24px 45px rgba(229,0,25,.2);transform:rotate(-22deg) translateZ(30px);animation:float 6s ease-in-out infinite}.card:nth-child(2) .orb{border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.16) 35%,#e50019 68%,#210006);transform:rotate(13deg) translateZ(30px)}.card:nth-child(3) .orb{border-radius:50%;background:radial-gradient(circle at 50% 50%,#09090b 0 22%,#e50019 23% 29%,#1b1b20 30% 48%,#050507 49% 58%,#34343a 59% 68%,#111 69%);transform:translateZ(30px)}.card h3{position:absolute;left:24px;bottom:49px;right:20px;margin:0;font-size:clamp(20px,2.3vw,31px);line-height:1;letter-spacing:-.035em;max-width:360px}.card p{position:absolute;left:24px;bottom:20px;margin:0;font-size:11px;color:rgba(255,255,255,.5)}.work{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:55px}.workCard{position:relative;height:430px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 70% 20%,rgba(229,0,25,.28),transparent 27%),linear-gradient(135deg,#17171d,#0a0a0d);transform-style:preserve-3d;transition:transform .18s}.bigA{position:absolute;right:-4%;top:-14%;font-weight:900;font-size:420px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.1);transform:rotate(-8deg) translateZ(25px)}.workCard:nth-child(2) .bigA{color:rgba(229,0,25,.1);-webkit-text-stroke:1px rgba(255,71,88,.23)}.label{position:absolute;left:25px;bottom:25px}.label b{display:block;font-size:27px;letter-spacing:-.04em}.label span{font-size:11px;color:rgba(255,255,255,.5)}.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:60px;border-radius:36px;border:1px solid rgba(255,255,255,.11);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:0 40px 90px rgba(0,0,0,.24)}.contact h2{font-size:clamp(60px,9vw,130px);margin:10px 0 14px;line-height:.78;letter-spacing:-.07em}.contact p{color:rgba(255,255,255,.55);max-width:420px;line-height:1.6}.form{display:flex;flex-direction:column;gap:12px;justify-content:center}.form input,.form textarea{width:100%;border:1px solid rgba(255,255,255,.12);outline:none;border-radius:17px;padding:15px 16px;background:rgba(0,0,0,.21);color:#fff;transition:.2s}.form textarea{height:130px;resize:vertical}.form input:focus,.form textarea:focus{border-color:rgba(255,74,93,.65);box-shadow:0 0 0 4px rgba(229,0,25,.08)}.form button{border:0;border-radius:17px;background:var(--red);color:#fff;padding:16px;cursor:pointer;font-weight:700;box-shadow:0 12px 35px rgba(229,0,25,.24);transition:.2s}.form button:hover{transform:translateY(-2px);background:#ff1630}footer{width:min(1180px,calc(100% - 40px));margin:auto;padding:28px 0 40px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.38);font-size:10px;letter-spacing:.11em}.fallback{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 68% 42%,rgba(229,0,25,.18),transparent 30%),#101015;color:#fff;text-align:center}.fallback b{font-size:clamp(42px,9vw,120px);letter-spacing:-.06em}.fallback span{display:block;color:#ff3c52;letter-spacing:.24em;font-size:10px}.scene img:not([src]){opacity:0}@keyframes intro{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}@keyframes scan{to{top:110%}}@keyframes float{50%{transform:rotate(-16deg) translateY(-10px) translateZ(30px)}}
+@media(max-width:820px){.hero{min-height:640px}.sceneWrap{inset:0}.scene{transform:scale(1.02)}.scene img{object-fit:cover;object-position:center}.brand{left:14px;top:14px}.brand small{display:none}nav{right:14px;top:14px}nav a:not(.cta){display:none}.heroLabel{left:14px;bottom:62px;max-width:calc(100% - 28px)}.hint{bottom:15px;white-space:nowrap}.hot{display:none}section{padding:78px 0}.services{grid-template-columns:1fr}.card:nth-child(n){grid-column:auto;min-height:260px}.work{grid-template-columns:1fr}.workCard{height:330px}.contact{grid-template-columns:1fr;padding:28px;gap:25px}footer{flex-direction:column}.sectionTitle{font-size:clamp(44px,13vw,76px)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.scene{transform:scale(1.04)!important}}
+</style>
 </head>
 <body>
-  <main>
-    <h1 class="hello">hello.</h1>
-    <p class="message">سایت در حال ساخته شدنه، به‌زودی...</p>
-    <p class="name">امیر سعید دهقان</p>
-  </main>
+<header class="hero" id="home">
+  <div class="sceneWrap"><div class="scene" id="scene"><div class="fallback"><div><b>AZADI° STUDIO</b><span>CREATIVE FREEDOM</span></div></div><img id="sceneImage" alt="Azadi Studio cinematic creative workspace"><div class="scan"></div>
+    <button class="hot h1" data-service="web" data-label="Website & App Design" aria-label="Website and App Design"></button>
+    <button class="hot h2" data-service="animation" data-label="3D & Cinematic Animation" aria-label="3D Advertising and Cinematic Animation"></button>
+    <button class="hot h3" data-service="film" data-label="Film & Video Editing" aria-label="Film and Video Editing"></button>
+    <button class="hot h4" data-service="graphic" data-label="Graphic Design" aria-label="Graphic Design"></button>
+    <button class="hot h5" data-service="photo" data-label="Photography & Videography" aria-label="Photography and Videography"></button>
+  </div></div>
+  <canvas id="dust"></canvas>
+  <a class="brand glass" href="#home"><span class="mark" aria-hidden="true"></span><span><b>Azadi Studio</b><small>CREATIVE FREEDOM</small></span></a>
+  <nav class="glass"><a href="#home">Home</a><a href="#services">Services</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="cta" href="#contact">Let's Create</a></nav>
+  <div class="heroLabel glass"><span class="eyebrow">Creative Freedom</span><h1>Innovation<br>Without Limits.</h1><p>Design · Animate · Film · Create · Inspire</p></div>
+  <div class="hint glass">Move to explore · Scroll for more</div>
+</header>
+<aside class="drawer" id="drawer" aria-hidden="true"><button class="close" id="close" aria-label="Close">×</button><span class="eyebrow">Azadi Studio Service</span><h2 id="dt">Creative Service</h2><p id="dd"></p><div class="tags" id="tags"></div></aside>
+<main>
+<section id="services"><span class="kicker">What we create</span><h2 class="sectionTitle">Ideas in motion.<br>Built to be remembered.</h2><p class="lead">Azadi Studio brings design, animation, film and visual storytelling together in one creative system — from the first idea to the final frame.</p><div class="services">
+<article class="card tilt"><span class="num">01</span><span class="orb"></span><h3>Website & App Design</h3><p>Digital experiences that inspire.</p></article>
+<article class="card tilt"><span class="num">02</span><span class="orb"></span><h3>3D Advertising & Cinematic Animation</h3><p>Ideas in motion. Worlds without limits.</p></article>
+<article class="card tilt"><span class="num">03</span><span class="orb"></span><h3>Photography & Videography</h3><p>Capture today. Create tomorrow.</p></article>
+<article class="card tilt"><span class="num">04</span><span class="orb"></span><h3>Film & Video Editing</h3><p>Stories that move people.</p></article>
+<article class="card tilt"><span class="num">05</span><span class="orb"></span><h3>Graphic Design</h3><p>Bold visuals. Lasting impressions.</p></article>
+</div></section>
+<section id="work"><span class="kicker">Selected world</span><h2 class="sectionTitle">Creative freedom,<br>without the noise.</h2><p class="lead">A visual language built around clean composition, dimensional surfaces, cinematic lighting and a strong red signature.</p><div class="work"><article class="workCard tilt"><span class="bigA">A</span><div class="label"><b>Digital Experiences</b><span>UI · UX · Interactive Web · Creative Development</span></div></article><article class="workCard tilt"><span class="bigA">A</span><div class="label"><b>Motion Worlds</b><span>3D · Animation · Film · VFX</span></div></article></div></section>
+<section id="contact"><div class="contact"><div><span class="kicker">Start something</span><h2>Let's<br>create.</h2><p>Tell us what you are imagining. We turn ideas into designed, animated and cinematic experiences.</p></div><form class="form" id="form"><input id="name" placeholder="Your name" required><input id="email" type="email" placeholder="Your email" required><textarea id="msg" placeholder="Tell us about the project" required></textarea><button>Create with Azadi →</button></form></div></section>
+<footer><span>© <span id="year"></span> AZADI STUDIO · CREATIVE FREEDOM</span><span>IDEAS · DESIGN · VISUALIZE · PRODUCE · ELEVATE</span></footer>
+</main>
+<script>
+(()=>{const root=document.documentElement,img=document.getElementById('sceneImage');fetch('assets/reference.b64').then(r=>{if(!r.ok)throw 0;return r.text()}).then(b=>{img.src='data:image/webp;base64,'+b.trim()}).catch(()=>{img.style.display='none'});
+let tx=0,ty=0,cx=0,cy=0;const fine=matchMedia('(pointer:fine)').matches,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;if(fine&&!reduce){addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2},{passive:true});(function loop(){cx+=(tx-cx)*.075;cy+=(ty-cy)*.075;root.style.setProperty('--mx',cx.toFixed(4));root.style.setProperty('--my',cy.toFixed(4));requestAnimationFrame(loop)})()}
+const data={web:['Website & App Design','Premium digital products shaped around intuitive UX, strong visual systems and memorable interaction.',['UI/UX','Interactive Web','Apps','Creative Development']],animation:['3D Advertising & Cinematic Animation','High-impact 3D visuals, branded motion, cinematic product shots and story-led animation with a polished finish.',['3D','CGI','Motion','Cinematic']],film:['Film & Video Editing','Rhythm, emotion and clarity — editing and motion design that turn footage into a purposeful story.',['Editing','Color','Motion Graphics','VFX']],graphic:['Graphic Design','Distinct visual identities and campaign graphics designed to feel sharp, modern and unmistakably yours.',['Branding','Art Direction','Campaigns','Visual Systems']],photo:['Photography & Videography','Clean, cinematic image-making for products, people, spaces and stories — crafted for digital-first brands.',['Photography','Videography','Lighting','Post']]};const drawer=document.getElementById('drawer'),dt=document.getElementById('dt'),dd=document.getElementById('dd'),tags=document.getElementById('tags'),close=document.getElementById('close');document.querySelectorAll('.hot').forEach(h=>h.onclick=()=>{const d=data[h.dataset.service];dt.textContent=d[0];dd.textContent=d[1];tags.innerHTML=d[2].map(x=>'<span>'+x+'</span>').join('');drawer.classList.add('open');drawer.setAttribute('aria-hidden','false')});const shut=()=>{drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true')};close.onclick=shut;addEventListener('keydown',e=>{if(e.key==='Escape')shut()});
+if(fine&&!reduce)document.querySelectorAll('.tilt').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateX(${(-y*6).toFixed(1)}deg) rotateY(${(x*7).toFixed(1)}deg) translateY(-4px)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
+const cv=document.getElementById('dust'),ctx=cv.getContext('2d');let dpr=Math.min(devicePixelRatio||1,2),p=[];function size(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);p=Array.from({length:Math.min(80,Math.floor(innerWidth/20))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()+.2,v:Math.random()*.15+.035,a:Math.random()*.35+.08,d:(Math.random()-.5)*.1}))}function dust(){ctx.clearRect(0,0,innerWidth,innerHeight);p.forEach(q=>{q.y-=q.v;q.x+=q.d;if(q.y<0){q.y=innerHeight;q.x=Math.random()*innerWidth}ctx.beginPath();ctx.arc(q.x,q.y,q.r,0,7);ctx.fillStyle=`rgba(255,255,255,${q.a})`;ctx.fill()});if(!reduce)requestAnimationFrame(dust)}size();dust();addEventListener('resize',size,{passive:true});
+document.getElementById('form').onsubmit=e=>{e.preventDefault();const n=document.getElementById('name').value.trim(),m=document.getElementById('email').value.trim(),x=document.getElementById('msg').value.trim();location.href='mailto:hello@azadistudio.ir?subject='+encodeURIComponent('Project inquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+m+'\n\n'+x)};document.getElementById('year').textContent=new Date().getFullYear()})();
+</script>
 </body>
 </html>
-<!-- Trigger Pages deployment -->
