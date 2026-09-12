@@ -24,22 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject workstation realism layer
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('index.html')
-          s = p.read_text(encoding='utf-8')
-          css = '<link rel="stylesheet" href="assets/realism.css">'
-          js = '<script src="assets/realism.js" defer></script>'
-          if css not in s:
-              s = s.replace('</head>', f'  {css}\n</head>')
-          if js not in s:
-              s = s.replace('</body>', f'  {js}\n</body>')
-          p.write_text(s, encoding='utf-8')
-          PY
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

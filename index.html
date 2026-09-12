@@ -163,9 +163,11 @@ body.device-mobile .scroll-hint{display:none}
 }
 
 </style>
-<link rel="stylesheet" href="assets/realism.css">
-<link rel="preload" as="image" href="assets/studio-reference.webp">
-<link rel="stylesheet" href="assets/studio-scene.css?v=20260912">
+
+
+
+<link rel="stylesheet" href="assets/workstation.css?v=3d-1">
+<script type="importmap">{"imports":{"three":"./assets/vendor/three.module.min.js"}}</script>
 </head>
 <body>
 <header class="topbar">
@@ -181,7 +183,24 @@ body.device-mobile .scroll-hint{display:none}
 </header>
 
 <section class="hero" id="top" aria-label="Interactive Azadi Studio workstation">
-  <div class="room" id="room">
+  <div id="webglStudio">
+ <div id="studioLoading" role="status"><span class="loading-orbit"></span><b>Building your view of Azadi</b><span>Loading the 3D studio…</span></div>
+ <div id="studioTooltip" hidden></div>
+</div>
+<div class="studio-caption"><span>AZADI STUDIO / CREATIVE FREEDOM</span><p>Your ideas.<br><em>A new dimension.</em></p></div>
+<nav class="studio-controls" aria-label="3D studio controls">
+ <button id="cameraFocus" class="studio-primary" type="button">Enter workstation ↗</button>
+ <button id="cameraLeft" type="button" aria-label="Orbit camera left">↶</button>
+ <button id="cameraRight" type="button" aria-label="Orbit camera right">↷</button>
+ <button id="cameraHome" type="button">Reset view</button>
+ <button id="lightToggle" type="button">Red studio light</button>
+ <button id="motionToggle" aria-pressed="true" type="button">Animation on</button>
+</nav>
+<div class="studio-hint">Drag to look around · Click the 3D icons and objects</div>
+<nav class="studio-shortcuts" aria-label="Open studio service">
+ <button type="button" data-service="web">Web & App</button><button type="button" data-service="animation">3D Animation</button><button type="button" data-service="editing">Film & Editing</button><button type="button" data-service="graphic">Graphic Design</button><button type="button" data-service="photo">Photography</button>
+</nav>
+<div class="room" id="room" inert aria-hidden="true">
     <div class="back-wall"><div class="wall-grid"></div><div class="red-halo"></div><div class="ceiling-glow"></div><div class="lightbar lb1"></div><div class="lightbar lb2"></div></div>
 
     <div class="hero-copy">
@@ -291,8 +310,8 @@ const services={
 };
 const root=document.documentElement,body=document.body,windowEl=document.getElementById('serviceWindow');
 const winTitle=document.getElementById('winTitle'),winHeading=document.getElementById('winHeading'),winText=document.getElementById('winText'),winTags=document.getElementById('winTags'),winCube=document.getElementById('winCube'),winSvg=document.getElementById('winSvg'),winEyebrow=document.getElementById('winEyebrow');
-function focusDesktop(){body.classList.add('focus-mode');setTimeout(()=>document.getElementById('screen').focus?.(),400)}
-function exitDesktop(){body.classList.remove('focus-mode');windowEl.classList.remove('open')}
+function focusDesktop(){body.classList.add('focus-mode');window.azadi3d?.focus()}
+function exitDesktop(){body.classList.remove('focus-mode');windowEl.classList.remove('open');window.azadi3d?.home()}
 function openService(key){const s=services[key];if(!s)return;focusDesktop();winTitle.textContent=s.title.toUpperCase();winEyebrow.textContent=s.n;winHeading.textContent=s.title;winText.textContent=s.text;winTags.innerHTML=s.tags.map(t=>'<span>'+t+'</span>').join('');winCube.style.setProperty('--winAccent',s.accent);windowEl.style.setProperty('--winAccent',s.accent);winSvg.innerHTML=s.svg;windowEl.classList.add('open')}
 ['enterStudio','monitorCta','focusNav'].forEach(id=>document.getElementById(id)?.addEventListener('click',focusDesktop));document.getElementById('focusExit').addEventListener('click',exitDesktop);document.getElementById('winClose').addEventListener('click',()=>windowEl.classList.remove('open'));document.getElementById('startButton').addEventListener('click',()=>openService('about'));
 document.querySelectorAll('[data-service]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();openService(el.dataset.service)}));document.getElementById('computer').addEventListener('dblclick',focusDesktop);
@@ -325,7 +344,16 @@ window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(windowEl.classList
 })();
 
 </script>
-<script src="assets/realism.js" defer></script>
-<script src="assets/studio-scene.js?v=20260912"></script>
+
+
+<script>
+// Keep service content as accessible HTML above the real-time 3D canvas.
+const studioDialog=document.getElementById('serviceWindow');
+document.querySelector('.hero').append(studioDialog);
+studioDialog.setAttribute('role','dialog');studioDialog.setAttribute('aria-labelledby','winHeading');
+new MutationObserver(()=>{studioDialog.inert=!studioDialog.classList.contains('open')}).observe(studioDialog,{attributes:true,attributeFilter:['class']});studioDialog.inert=true;
+const studioModule=document.createElement('script');studioModule.type='module';studioModule.src='assets/workstation.js?v=3d-1';
+studioModule.onerror=()=>{document.getElementById('studioLoading').innerHTML='The 3D view could not load. <a href="#services">Explore our services ↓</a>'};document.body.append(studioModule);
+</script>
 </body>
 </html>
