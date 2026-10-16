@@ -352,7 +352,7 @@ const studioDialog=document.getElementById('serviceWindow');
 document.querySelector('.hero').append(studioDialog);
 studioDialog.setAttribute('role','dialog');studioDialog.setAttribute('aria-labelledby','winHeading');
 new MutationObserver(()=>{studioDialog.inert=!studioDialog.classList.contains('open')}).observe(studioDialog,{attributes:true,attributeFilter:['class']});studioDialog.inert=true;
-const studioModule=document.createElement('script');studioModule.type='module';studioModule.src='assets/workstation.js?v=3d-1';
+const studioModule=document.createElement('script');studioModule.type='module';studioModule.src='assets/workstation.js?v=fidelity-20261016';
 studioModule.onerror=()=>{document.getElementById('studioLoading').innerHTML='The 3D view could not load. <a href="#services">Explore our services ↓</a>'};document.body.append(studioModule);
 </script>
 </body>
